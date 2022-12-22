@@ -40,7 +40,7 @@ router.post('/score', async (req, res) => {
 
 router.get('/score', async (req, res) => {
     try {
-        const score = await Scores.find({}).sort({score:'desc'}).limit(5)
+        const score = await Scores.find({}).sort({score:'desc'})
         return (
             res.status(200).send({
                 message: "success",
