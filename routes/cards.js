@@ -31,7 +31,7 @@ router.post("/admin/card", authMiddleware, async (req, res) => {
 
 })
 
-router.get("/admin/card", async (req, res) => {
+router.get("/cards", async (req, res) => {
     try {
         const cards = await Cards.find({})
         res.status(200).send({
